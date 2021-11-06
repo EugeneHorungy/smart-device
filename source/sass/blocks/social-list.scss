@@ -1,0 +1,22 @@
+.social-list {
+  @include list-reset();
+
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $max-mobile-width) {
+    margin-top: 18px;
+  }
+}
+
+.social-list__item + .social-list__item {
+  margin-left: 15px;
+}
+
+.social-list__link svg {
+  transition: all 0.4s;
+}
+
+.social-list__link:hover svg {
+  transform: scale(120%);
+}

@@ -1,0 +1,68 @@
+.company-contacts {
+  @media (max-width: $max-tablet-width) {
+    padding-left: 14px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-left: 0;
+  }
+}
+
+.company-contacts__list {
+  @include list-reset();
+
+  margin-right: 4px;
+  padding-bottom: 12px;
+
+  @media (max-width: $max-mobile-width) {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 4px;
+    margin-bottom: 15px;
+  }
+}
+
+.company-contacts__title h2 {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $text-color-gray;
+  margin-top: 0;
+  margin-bottom: 26px;
+
+  @media (max-width: $max-tablet-width) {
+    padding-left: 4px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    position: relative;
+    margin-bottom: 0;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 16px;
+    cursor: pointer;
+  }
+}
+
+.company-contacts__item {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: rgba($text-color-gray, 0.5);
+}
+
+.company-contacts__item address {
+  font-style: normal;
+}
+
+.page-body {
+  height: 4066px;
+}
+
+.page-body__footer {
+  background-color: rosybrown;
+}
+
