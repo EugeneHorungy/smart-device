@@ -1,0 +1,65 @@
+.card {
+  display: block;
+  position: relative;
+  transition: all 0.4s;
+
+  @media (min-width: $desktop-width-only) {
+    &:hover {
+      transform: scale(105%);
+    }
+  }
+}
+
+.card h3 {
+  position: absolute;
+  top: 28px;
+  left: 42px;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: $secondary-font;
+  font-weight: 400;
+  color: $text-color-white;
+
+  @media (max-width: $max-tablet-width) {
+    top: 20px;
+    left: 45px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    top: 0;
+    left: 36px;
+  }
+}
+
+.card.card--lighting h3 {
+  top: 10px;
+}
+
+.card__btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 63px;
+  height: 63px;
+  background-color: $color-accent;
+}
+
+.card__btn-icon {
+  fill: none;
+  stroke: #fff;
+}
+
+.card picture {
+  display: flex;
+}
+
+.card img {
+  width: 100%;
+
+  @media (max-width: $max-mobile-width) {
+    max-width: 414px;
+  }
+}

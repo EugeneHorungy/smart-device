@@ -4,6 +4,12 @@
   max-width: 1512px;
 }
 
+@mixin container-main() {
+  margin: 0 auto;
+  padding: 0 50px;
+  max-width: 1270px;
+}
+
 @mixin container-tablet() {
   margin: 0 auto;
   padding: 0 25px;

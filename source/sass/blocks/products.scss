@@ -1,0 +1,42 @@
+.products {
+  background-color: $dark-blue-bg;
+}
+
+.products__wrapper {
+  @include container-main();
+
+  padding-top: 60px;
+  padding-bottom: 127px;
+
+  @media (max-width: $max-tablet-width) {
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding: 27px 14px 63px 14px;
+  }
+}
+
+.products h2 {
+  font-size: 36px;
+  line-height: 51px;
+  font-family: $secondary-font;
+  font-weight: 400;
+  color: $text-color-white;
+  margin-bottom: 52px;
+
+  @media (max-width: $max-tablet-width) {
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 49px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    font-size: 28px;
+    line-height: 39px;
+    padding-left: 12px;
+    margin-bottom: 42px;
+  }
+}
