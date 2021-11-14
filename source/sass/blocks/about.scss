@@ -38,17 +38,31 @@
     content: "";
     width: 220px;
     height: 320px;
-    background-image: url("../img/content/year2005-desktop.png");
     background-repeat: no-repeat;
     top: 40px;
     left: -30px;
 
+    .webp & {
+      background-image: image-set(url("../img/content/year2005-desktop.webp") 1x, url("../img/content/year2005-desktop@2x.webp") 2x);
+    }
+
+    .no-webp & {
+      background-image: image-set(url("../img/content/year2005-desktop.png") 1x, url("../img/content/year2005-desktop@2x.png") 2x);
+    }
+
     @media (max-width: $max-tablet-width) {
       width: 244px;
       height: 362px;
-      background-image: url("../img/content/year2005-tablet.png");
       top: 30px;
       left: -26px;
+
+      .webp & {
+        background-image: image-set(url("../img/content/year2005-tablet.webp") 1x, url("../img/content/year2005-tablet@2x.webp") 2x);
+      }
+
+      .no-webp & {
+        background-image: image-set(url("../img/content/year2005-tablet.png") 1x, url("../img/content/year2005-tablet@2x.png") 2x);
+      }
     }
 
     @media (max-width: $max-mobile-width) {
@@ -119,6 +133,11 @@
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 20px;
+  padding-right: 4px;
+
+  @media (max-width: $max-tablet-width) {
+    padding-right: 0;
+  }
 
   @media (max-width: $max-mobile-width) {
     margin-bottom: 40px;

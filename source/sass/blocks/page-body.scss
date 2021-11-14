@@ -1,5 +1,4 @@
 .page-body {
-  min-height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
   font-family: $primary-font;
@@ -8,13 +7,11 @@
   padding: 0;
   grid-auto-flow: row;
   min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
 
-  @media (max-width: $max-tablet-width) {
-    min-height: 4047px;
-  }
-
-  @media (max-width: $max-mobile-width) {
-    min-height: 4869px;
+  &--show-modal {
+    overflow-y: hidden;
   }
 }
 

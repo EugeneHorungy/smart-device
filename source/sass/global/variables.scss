@@ -1,16 +1,22 @@
 $dark-blue-bg: #1b2d37;
-$text-color-white: #fff;
+$white-bg-color: #ffffff;
+$text-color-white: #ffffff;
 $text-color-gray: #1b2d37;
 $text-color-light-gray: #666666;
-$header-btn-border-color: #fff;
-$footer-border-color: #626962;
+$footer-border-color: rgba(#626962, 0.2);
+$header-btn-border-color: #ffffff;
+$form-btn-border-color: #ffffff;
+$form-btn-close-color: #ffffff;
+$input-focus-border-color: #ffffff;
+$form-checkbox-color: #ffffff;
 $features-border-color: #ebebeb;
-$features-icon-color-hover: #fff;
+$features-icon-color-hover: #ffffff;
 $toggle-accordeon-color: #c4c4c4;
 $color-accent: #00b2ff;
+$card-btn-icon-color: #ffffff;
 
-$primary-font: "PT Mono", monospace;
-$secondary-font: "Roboto Condensed", sans-serif;
+$primary-font: "PT Mono", "Courier New", monospace;
+$secondary-font: "Roboto Condensed", "Arial", sans-serif;
 
 $max-tablet-width: 1023px;
 $max-mobile-width: 767px;

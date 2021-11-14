@@ -1,17 +1,12 @@
 .promo {
   position: relative;
-  // min-height: 878px;
-  // padding-top: 258px;
   padding-top: 13.43vw;
-  // padding-top: 29.38%;
   padding-bottom: 100px;
-  // padding-bottom: 11.96%;
   background-color: $dark-blue-bg;
 
   &::before {
     position: absolute;
     content: "";
-    background-image: url("../img/decoration/promo-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     top: 0;
@@ -19,12 +14,32 @@
     right: 0;
     bottom: 0;
 
+    .webp & {
+      background-image: image-set(url("../img/decoration/promo-bg.webp") 1x, url("../img/decoration/promo-bg@2x.webp") 2x);
+    }
+
+    .no-webp & {
+      background-image: image-set(url("../img/decoration/promo-bg.png") 1x, url("../img/decoration/promo-bg@2x.png") 2x);
+    }
+
     @media (max-width: $max-tablet-width) {
-      background-image: url("../img/decoration/promo-bg-tablet.png");
+      .webp & {
+        background-image: image-set(url("../img/decoration/promo-bg-tablet.webp") 1x, url("../img/decoration/promo-bg-tablet@2x.webp") 2x);
+      }
+
+      .no-webp & {
+        background-image: image-set(url("../img/decoration/promo-bg-tablet.png") 1x, url("../img/decoration/promo-bg-tablet@2x.png") 2x);
+      }
     }
 
     @media (max-width: $max-mobile-width) {
-      background-image: url("../img/decoration/promo-bg-mobile.png");
+      .webp & {
+        background-image: image-set(url("../img/decoration/promo-bg-mobile.webp") 1x, url("../img/decoration/promo-bg-mobile@2x.webp") 2x);
+      }
+
+      .no-webp & {
+        background-image: image-set(url("../img/decoration/promo-bg-mobile.png") 1x, url("../img/decoration/promo-bg-mobile@2x.png") 2x);
+      }
     }
   }
 
@@ -182,7 +197,7 @@
   }
 }
 
-.promo__info a {
+.promo__btn {
   display: block;
   font-family: $secondary-font;
   font-weight: 700;
@@ -198,6 +213,13 @@
   background-color: $color-accent;
   border-radius: 5px;
   min-width: 407px;
+  cursor: pointer;
+  transition: all 0.4s;
+
+  &:hover {
+    background-color: $white-bg-color;
+    color: $color-accent;
+  }
 
   @media (max-width: $max-tablet-width) {
     min-width: 379px;
@@ -212,6 +234,20 @@
     transform: translateX(0);
     min-width: 287px;
     align-self: center;
+  }
+}
+
+.promo__btn-text--desktop {
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
+}
+
+.promo__btn-text--mobile {
+  display: none;
+
+  @media (max-width: $max-mobile-width) {
+    display: inline;
   }
 }
 
@@ -230,6 +266,8 @@
 
   @media (max-width: $max-mobile-width) {
     width: 100%;
+    align-self: flex-end;
+    max-width: 294px;
     position: absolute;
     z-index: -1;
     top: -26px;

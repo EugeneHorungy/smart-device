@@ -1,0 +1,307 @@
+.feedback {
+  position: relative;
+  background-color: $color-accent;
+  padding-top: 60px;
+  padding-bottom: 76px;
+
+  @media (max-width: $max-tablet-width) {
+    padding-top: 53px;
+    padding-bottom: 66px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-top: 6px;
+    padding-bottom: 10px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 1745px;
+    height: 765px;
+    background-image: url("../../img/decoration/triangles-form-bg.svg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 90.88vw auto;
+    top: -61px;
+    right: 0;
+
+    @media (max-width: $max-tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.feedback__wrapper {
+  @include container-main();
+
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: $max-tablet-width) {
+    padding-left: 87px;
+    padding-right: 85px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.feedback__form-wrapper {
+  position: relative;
+  width: 50%;
+  margin-left: auto;
+
+  @media (max-width: $max-tablet-width) {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    max-width: 414px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 511px;
+    height: 288px;
+    background-repeat: no-repeat;
+    top: 100px;
+    left: -610px;
+
+    .webp & {
+      background-image: image-set(url("../img/decoration/plane.webp") 1x, url("../img/decoration/plane@2x.webp") 2x);
+    }
+
+    .no-webp & {
+      background-image: image-set(url("../img/decoration/plane.png") 1x, url("../img/decoration/plane@2x.png") 2x);
+    }
+
+    @media (max-width: $max-tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.feedback h2 {
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+  font-family: $secondary-font;
+  color: $text-color-white;
+  padding-left: 11px;
+  margin-bottom: 10px;
+
+  @media (max-width: $max-tablet-width) {
+    font-size: 32px;
+    line-height: 45px;
+    padding-left: 1px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    font-size: 28px;
+    line-height: 39px;
+    padding-left: 0;
+    margin-bottom: 13px;
+  }
+}
+
+.feedback p {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: $text-color-white;
+  margin-top: 8px;
+  margin-bottom: 52px;
+  padding-left: 14px;
+
+  @media (max-width: $max-tablet-width) {
+    padding-left: 6px;
+    margin-bottom: 54px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-left: 0;
+    margin-bottom: 26px;
+  }
+}
+
+.feedback__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 16px;
+
+  @media (max-width: $max-tablet-width) {
+    padding-left: 5px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-left: 0;
+  }
+}
+
+.feedback__form label[for="question"] {
+  width: 100%;
+  flex-direction: column;
+}
+
+.feedback__form textarea,
+.feedback__form input {
+  width: 100%;
+  border: none;
+  background-color: rgba($white-bg-color, 0.1);
+}
+
+.feedback__form textarea:focus,
+.feedback__form input:focus,
+.feedback__form textarea:hover,
+.feedback__form input:hover {
+  outline: 1px solid $input-focus-border-color;
+}
+
+.feedback__form input {
+  padding: 14px 16px 14px 16px;
+}
+
+.feedback__form input,
+.feedback__form input::placeholder {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  font-family: $primary-font;
+  color: $text-color-white;
+  overflow: visible;
+}
+
+.feedback__form textarea,
+.feedback__form textarea::placeholder {
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 400;
+  font-family: $primary-font;
+  color: $text-color-white;
+  overflow: visible;
+
+  @media (max-width: $max-tablet-width) {
+    font-size: 16px;
+  }
+}
+
+.feedback__form textarea {
+  padding: 10px 16px;
+  margin-bottom: 39px;
+  resize: none;
+  min-height: 154px;
+
+  @media (max-width: $max-tablet-width) {
+    margin-bottom: 42px;
+    min-height: 159px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-top: 3px;
+    min-height: 104px;
+    margin-bottom: 27px;
+  }
+}
+
+.feedback__form input[name="confirm-user-data"] {
+  position: fixed;
+  transform: scale(0);
+}
+
+.feedback__form label[for="name"],
+.feedback__form label[for="phone"],
+.feedback__form label[for="confirm-user-data"],
+.feedback__form button {
+  width: calc(50% - 15px);
+
+  margin-bottom: 40px;
+
+  @media (max-width: $max-tablet-width) {
+    margin-bottom: 42px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+    margin-bottom: 31px;
+  }
+}
+
+.feedback__form button {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $text-color-white;
+  padding: 14px 18px 10px;
+  border: 1px solid $form-btn-border-color;
+  border-radius: 5px;
+  background-color: $color-accent;
+  transition: all 0.4s;
+
+  &:hover {
+    background-color: rgba($white-bg-color, 0.8);
+    color: $color-accent;
+    cursor: pointer;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-bottom: 26px;
+  }
+}
+
+.feedback__form label[for="confirm-user-data"] {
+  position: relative;
+  padding-left: 39px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: rgba($text-color-white, 0.8);
+  cursor: pointer;
+  margin-top: 8px;
+
+  @media (max-width: $max-mobile-width) {
+    padding-left: 33px;
+  }
+}
+
+.feedback__form label[for="confirm-user-data"]::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 7px;
+  border: 1px solid $form-checkbox-color;
+
+  @media (max-width: $max-mobile-width) {
+    left: 0;
+  }
+}
+
+.feedback__form input[name="confirm-user-data"]:checked + label[for="confirm-user-data"]::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 7px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../../img/tick-border.svg");
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+
+  @media (max-width: $max-mobile-width) {
+    left: 0;
+  }
+}
+
+.feedback__form input[name="confirm-user-data"]:focus + label[for="confirm-user-data"] {
+  outline: 1px solid $input-focus-border-color;
+}

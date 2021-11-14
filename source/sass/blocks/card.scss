@@ -32,7 +32,9 @@
 }
 
 .card.card--lighting h3 {
-  top: 10px;
+  @media (max-width: $max-mobile-width) {
+    top: 10px;
+  }
 }
 
 .card__btn {
@@ -49,7 +51,7 @@
 
 .card__btn-icon {
   fill: none;
-  stroke: #fff;
+  stroke: $card-btn-icon-color;
 }
 
 .card picture {
@@ -58,8 +60,19 @@
 
 .card img {
   width: 100%;
+  transition: all 0.4s;
+
+  @media (min-width: $desktop-width-only) {
+    opacity: 0.2;
+  }
 
   @media (max-width: $max-mobile-width) {
     max-width: 414px;
+  }
+}
+
+.card:hover img {
+  @media (min-width: $desktop-width-only) {
+    opacity: 1;
   }
 }

@@ -29,6 +29,8 @@
   }
 
   @media (max-width: $max-mobile-width) {
+    width: 38px;
+    height: 38px;
     margin-left: 17px;
   }
 }
@@ -50,6 +52,12 @@
   padding: 11px 27px 11px 25px;
   height: 45px;
   align-self: center;
+  transition: all 0.4s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-accent;
+  }
 
   @media (max-width: $max-tablet-width) {
     display: none;

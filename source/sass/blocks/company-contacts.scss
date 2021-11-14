@@ -32,10 +32,7 @@
   color: $text-color-gray;
   margin-top: 0;
   margin-bottom: 26px;
-
-  @media (max-width: $max-tablet-width) {
-    padding-left: 4px;
-  }
+  padding-left: 4px;
 
   @media (max-width: $max-mobile-width) {
     position: relative;
@@ -54,15 +51,10 @@
   color: rgba($text-color-gray, 0.5);
 }
 
+.company-contacts__item a:hover {
+  color: $color-accent;
+}
+
 .company-contacts__item address {
   font-style: normal;
 }
-
-.page-body {
-  height: 4066px;
-}
-
-.page-body__footer {
-  background-color: rosybrown;
-}
-

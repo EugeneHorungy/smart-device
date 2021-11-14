@@ -1,5 +1,7 @@
 .features {
   @include container-main();
+
+  position: relative;
   padding-top: 112px;
 
   @media (max-width: $max-tablet-width) {
@@ -36,6 +38,7 @@
   padding: 40px 42px 12px 41px;
   min-height: 299px;
   transition: all 0.4s;
+  background-color: $white-bg-color;
 
   @media (max-width: $max-tablet-width) {
     padding: 24px 21px 21px 24px;
@@ -64,20 +67,20 @@
   }
 }
 
-.features__item:nth-child(2) {
+.features__item--partners {
   @media (max-width: $max-mobile-width) {
     padding-right: 10px;
     padding-bottom: 29px;
   }
 }
 
-.features__item:nth-child(3) {
+.features__item--confidentiality {
   @media (max-width: $max-mobile-width) {
     padding-right: 17px;
   }
 }
 
-.features__item:nth-child(4) {
+.features__item--price {
   @media (max-width: $max-mobile-width) {
     padding-bottom: 19px;
   }
@@ -107,6 +110,22 @@
 
 .features__item--confidentiality h3,
 .features__item--price h3 {
+  @media (max-width: $max-mobile-width) {
+    margin-bottom: 17px;
+  }
+}
+
+.features__item--confidentiality h3 {
+  @media (max-width: $max-tablet-width) {
+    margin-bottom: 15px;
+  }
+}
+
+.features__item--price h3 {
+  @media (max-width: $max-tablet-width) {
+    margin-bottom: 5px;
+  }
+
   @media (max-width: $max-mobile-width) {
     margin-bottom: 17px;
   }

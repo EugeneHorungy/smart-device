@@ -1,0 +1,12 @@
+.main__decoration-wrapper {
+  background-image: url("../img/decoration/features-bg.svg");
+  background-position: 0 -29px;
+
+  @media (max-width: $max-tablet-width) {
+    background-position: -348px -88px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    background-position: -679px 477px;
+  }
+}

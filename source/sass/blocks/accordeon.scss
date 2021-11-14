@@ -34,7 +34,7 @@
       top: 50%;
       bottom: 0;
       background-color: $toggle-accordeon-color;
-      transform: rotate(90deg);
+      transform: rotate(90deg) translateY(-0.1px);
     }
   }
 }
