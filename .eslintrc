@@ -12,5 +12,4 @@ parserOptions:
 
 
 globals:
-  mask: readonly,
   iMask: readonly
