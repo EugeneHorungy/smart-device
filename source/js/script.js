@@ -27,13 +27,15 @@ const formStorage = {};
 
 // Scroll to feedback block
 
-consultationBtn.addEventListener('click', (evt) => {
-  evt.preventDefault();
-  feedbackBlock.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
+if (consultationBtn) {
+  consultationBtn.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    feedbackBlock.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
   });
-});
+}
 
 // Modal handler
 
@@ -120,62 +122,83 @@ feedbackUserQuestion.addEventListener('focus', (evt) => {
   getStorageValue(formStorage.question, feedbackUserQuestion);
 });
 
-modalForm.addEventListener('submit', function (evt) {
-  if (!modalUserName.value || !modalUserPhone.value) {
-    evt.preventDefault();
-  } else {
-    if (isStorageSupport) {
-      localStorage.setItem('name', modalUserName.value);
-      localStorage.setItem('phone', modalUserPhone.value);
-      localStorage.setItem('question', modalUserQuestion.value);
+if (modalForm) {
+  modalForm.addEventListener('submit', function (evt) {
+    if (!modalUserName.value || !modalUserPhone.value) {
+      evt.preventDefault();
+    } else {
+      if (isStorageSupport) {
+        localStorage.setItem('name', modalUserName.value);
+        localStorage.setItem('phone', modalUserPhone.value);
+        localStorage.setItem('question', modalUserQuestion.value);
+      }
     }
-  }
-});
+  });
+}
 
-feedbackForm.addEventListener('submit', function (evt) {
-  if (!feedbackUserName.value || !feedbackUserPhone.value) {
-    evt.preventDefault();
-  } else {
-    if (isStorageSupport) {
-      localStorage.setItem('name', feedbackUserName.value);
-      localStorage.setItem('phone', feedbackUserPhone.value);
-      localStorage.setItem('question', feedbackUserQuestion.value);
+if (feedbackForm) {
+  feedbackForm.addEventListener('submit', function (evt) {
+    if (!feedbackUserName.value || !feedbackUserPhone.value) {
+      evt.preventDefault();
+    } else {
+      if (isStorageSupport) {
+        localStorage.setItem('name', feedbackUserName.value);
+        localStorage.setItem('phone', feedbackUserPhone.value);
+        localStorage.setItem('question', feedbackUserQuestion.value);
+      }
     }
-  }
-});
+  });
+}
 
 // Accordeon
 
-navTitle.classList.add('accordeon-switcher');
-navList.classList.add('accordeon');
-companyContactsTitle.classList.add('accordeon-switcher');
-companyContactsList.classList.add('accordeon');
+if (navTitle) {
+  navTitle.classList.add('accordeon-switcher');
+}
+
+if (navList) {
+  navList.classList.add('accordeon');
+}
+
+if (companyContactsTitle) {
+  companyContactsTitle.classList.add('accordeon-switcher');
+}
+
+if (companyContactsList) {
+  companyContactsList.classList.add('accordeon');
+}
 
 const removeSwitcherActiveClass = () => {
-  Array.from(accordeonSwitchers).forEach((item) => {
-    item.classList.remove('accordeon-switcher--active');
-  });
+  if (accordeonSwitchers) {
+    Array.from(accordeonSwitchers).forEach((item) => {
+      item.classList.remove('accordeon-switcher--active');
+    });
+  }
 };
 
 const removeAccordeonActiveClass = () => {
-  Array.from(accordeons).forEach((item) => {
-    item.classList.remove('accordeon--active');
-  });
+  if (accordeons) {
+    Array.from(accordeons).forEach((item) => {
+      item.classList.remove('accordeon--active');
+    });
+  }
 };
 
-Array.from(accordeonSwitchers).forEach((item, i) => {
-  item.addEventListener('click', () => {
-    if (accordeonSwitchers[i].classList.contains('accordeon-switcher--active')) {
-      accordeonSwitchers[i].classList.remove('accordeon-switcher--active');
-      accordeons[i].classList.remove('accordeon--active');
-    } else {
-      removeSwitcherActiveClass();
-      removeAccordeonActiveClass();
-      accordeonSwitchers[i].classList.add('accordeon-switcher--active');
-      accordeons[i].classList.add('accordeon--active');
-    }
+if (accordeonSwitchers) {
+  Array.from(accordeonSwitchers).forEach((item, i) => {
+    item.addEventListener('click', () => {
+      if (accordeonSwitchers[i].classList.contains('accordeon-switcher--active')) {
+        accordeonSwitchers[i].classList.remove('accordeon-switcher--active');
+        accordeons[i].classList.remove('accordeon--active');
+      } else {
+        removeSwitcherActiveClass();
+        removeAccordeonActiveClass();
+        accordeonSwitchers[i].classList.add('accordeon-switcher--active');
+        accordeons[i].classList.add('accordeon--active');
+      }
+    });
   });
-});
+}
 
 // Phone mask
 
