@@ -1,13 +1,11 @@
 .modal__wrapper {
-  position: fixed;
+  position: relative;
   width: 490px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color: $color-accent;
   z-index: 100;
   padding: 15px 39px 42px;
-  overflow-y: scroll;
+  margin: 136px auto;
+  overflow: auto;
 
   @media (max-width: $max-mobile-width) {
     width: 100%;
@@ -24,6 +22,7 @@
   right: 0;
   background: rgba(0, 0, 0, 0.6);
   z-index: 100;
+  overflow: auto;
 
   &--show {
     display: block;

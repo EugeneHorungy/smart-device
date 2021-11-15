@@ -70,9 +70,3 @@
     max-width: 414px;
   }
 }
-
-.card:hover img {
-  @media (min-width: $desktop-width-only) {
-    opacity: 1;
-  }
-}
