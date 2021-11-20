@@ -1,6 +1,6 @@
 .promo {
   position: relative;
-  padding-top: 13.43vw;
+  padding-top: 258px;
   padding-bottom: 100px;
   background-color: $dark-blue-bg;
 
@@ -252,6 +252,7 @@
 }
 
 .promo__img {
+  position: relative;
   width: 49%;
   margin-left: 46px;
   display: flex;
