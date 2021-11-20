@@ -106,24 +106,17 @@
   }
 }
 
-.about__info {
-  @media (max-width: $max-tablet-width) {
-    height: 200px;
-    overflow: hidden;
-    max-width: 530px;
-  }
-
-  @media (max-width: $max-mobile-width) {
-    height: 352px;
-    max-width: 500px;
-  }
-}
-
-.about__info span {
+.about__info .about__info-ellipsis {
   display: none;
 
   @media (max-width: $max-tablet-width) {
     display: inline;
+  }
+}
+
+.about__info-hidden-text {
+  @media (max-width: $max-tablet-width) {
+    display: none;
   }
 }
 

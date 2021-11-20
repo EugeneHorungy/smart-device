@@ -62,11 +62,21 @@
   width: 100%;
   transition: all 0.4s;
 
+  @media (max-width: $max-tablet-width) and (min-width: $min-tablet-width) {
+    height: 256px;
+  }
+
   @media (min-width: $desktop-width-only) {
     opacity: 0.2;
   }
 
   @media (max-width: $max-mobile-width) {
     max-width: 414px;
+  }
+}
+
+.card__image-wrapper {
+  @media (max-width: $max-tablet-width) and (min-width: $min-tablet-width) {
+    height: 256px;
   }
 }

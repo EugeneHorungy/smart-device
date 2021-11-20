@@ -15,6 +15,7 @@
   @include container-desktop();
 
   display: flex;
+  align-items: flex-start;
 
   @media (max-width: $max-tablet-width) {
     padding: 0;
@@ -47,11 +48,12 @@
   background-color: transparent;
   border: 1px solid $header-btn-border-color;
   border-radius: 5px;
+  margin-top: 4px;
   margin-left: 35px;
   margin-right: 9px;
-  padding: 11px 27px 11px 25px;
-  height: 45px;
-  align-self: center;
+  padding: 11px;
+  min-width: 180px;
+  min-height: 45px;
   transition: all 0.4s;
   cursor: pointer;
 
