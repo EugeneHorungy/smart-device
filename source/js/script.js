@@ -39,6 +39,24 @@ if (consultationBtn) {
 
 // Modal handler
 
+const catchFocus = (evt) => {
+  const focusableElements = modal.querySelectorAll('input, textarea, button');
+  const firstFocusableElement = focusableElements[0];
+  const lastFocusableElement = focusableElements[focusableElements.length - 1];
+
+  if (evt.shiftKey) {
+    if (document.activeElement === firstFocusableElement) {
+      lastFocusableElement.focus();
+      evt.preventDefault();
+    }
+  } else {
+    if (document.activeElement === lastFocusableElement) {
+      firstFocusableElement.focus();
+      evt.preventDefault();
+    }
+  }
+};
+
 const onModalEscKeydown = (evt) => {
   if (evt.key === 'Escape' || evt.key === 'Esc') {
     evt.preventDefault();
@@ -56,6 +74,7 @@ const showModal = () => {
   pageBody.classList.add('page-body--show-modal');
   modal.classList.add('modal--show');
   modalUserName.focus();
+  modal.addEventListener('keydown', catchFocus);
   window.addEventListener('keydown', onModalEscKeydown);
   window.addEventListener('click', onModalClick);
 };
@@ -63,6 +82,7 @@ const showModal = () => {
 function hideModal() {
   pageBody.classList.remove('page-body--show-modal');
   modal.classList.remove('modal--show');
+  modal.removeEventListener('keydown', catchFocus);
   window.removeEventListener('keydown', onModalEscKeydown);
   window.removeEventListener('click', onModalClick);
 }

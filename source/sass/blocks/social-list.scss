@@ -4,13 +4,32 @@
   display: flex;
   flex-wrap: wrap;
 
+  max-width: 216px;
+
+  @media (max-width: $max-tablet-width) {
+    margin-top: 5px;
+    max-width: 128px;
+  }
+
   @media (max-width: $max-mobile-width) {
     margin-top: 18px;
+    max-width: 100%;
   }
 }
 
-.social-list__item + .social-list__item {
-  margin-left: 15px;
+.social-list__item {
+  margin-right: 15px;
+  margin-bottom: 10px;
+
+  @media (max-width: $max-tablet-width) {
+    margin-right: 0;
+    margin-left: 15px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
 }
 
 .social-list__link svg {

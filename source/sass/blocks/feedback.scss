@@ -5,7 +5,7 @@
   padding-bottom: 76px;
 
   @media (max-width: $max-tablet-width) {
-    padding-top: 53px;
+    padding-top: 56px;
     padding-bottom: 66px;
   }
 
@@ -60,7 +60,7 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    max-width: 414px;
+    max-width: 514px;
   }
 
   &::before {

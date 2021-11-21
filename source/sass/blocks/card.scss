@@ -32,6 +32,10 @@
 }
 
 .card.card--lighting h3 {
+  @media (max-width: $max-tablet-width) {
+    top: 30px;
+  }
+
   @media (max-width: $max-mobile-width) {
     top: 10px;
   }

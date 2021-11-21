@@ -1,6 +1,10 @@
 .nav {
   margin-right: 27px;
 
+  @media (min-width: $desktop-width-only) {
+    margin-left: 0;
+  }
+
   @media (max-width: $max-tablet-width) {
     margin-bottom: 37px;
   }
